@@ -70,7 +70,7 @@ static void main_window_load(Window *window) {
 //   APP_LOG(APP_LOG_LEVEL_INFO , "Max Layer Width is %i", time_max_size.w);
 
   // Background Image section sizes
-  int bg_header_size = 40;
+  int bg_header_size = 5;
   int bg_window_size = 88;
 
   // Default textlayer padding value
