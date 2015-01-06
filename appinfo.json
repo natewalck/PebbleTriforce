@@ -1,0 +1,73 @@
+{
+    "appKeys": {
+        "KEY_TEMPERATURE": 0,
+        "KEY_CONDITIONS": 1
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "OS X Devops",
+    "longName": "Triforce Advanced",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/background.png",
+                "name": "IMAGE_BACKGROUND",
+                "type": "png"
+            },
+            {
+                "file": "images/battery01.png",
+                "name": "IMAGE_BATTERY01",
+                "type": "png"
+            },
+            {
+                "file": "images/battery02.png",
+                "name": "IMAGE_BATTERY02",
+                "type": "png"
+            },
+            {
+                "file": "images/battery03.png",
+                "name": "IMAGE_BATTERY03",
+                "type": "png"
+            },
+            {
+                "file": "images/battery04.png",
+                "name": "IMAGE_BATTERY04",
+                "type": "png"
+            },
+            {
+                "file": "images/battery05.png",
+                "name": "IMAGE_BATTERY05",
+                "type": "png"
+            },
+            {
+                "file": "images/battery06.png",
+                "name": "IMAGE_BATTERY06",
+                "type": "png"
+            },
+            {
+                "file": "images/battery07.png",
+                "name": "IMAGE_BATTERY07",
+                "type": "png"
+            },
+            {
+                "file": "images/battery08.png",
+                "name": "IMAGE_BATTERY08",
+                "type": "png"
+            },
+            {
+                "file": "images/battery09.png",
+                "name": "IMAGE_BATTERY09",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "Triforce",
+    "uuid": "2e543ef0-1ad3-42a5-8a06-3cbb64ba5f12",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
