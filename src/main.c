@@ -89,6 +89,7 @@ static void main_window_load(Window *window) {
   s_battery01_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY01);
   s_battery01_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_bitmap(s_battery01_layer, s_battery01_bitmap);
+  layer_mark_dirty(s_battery01_layer);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery01_layer));
 
   // Create GFont for Time Layer
