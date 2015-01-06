@@ -1,7 +1,7 @@
 {
     "appKeys": {
-        "KEY_TEMPERATURE": 0,
-        "KEY_CONDITIONS": 1
+        "KEY_CONDITIONS": 1,
+        "KEY_TEMPERATURE": 0
     },
     "capabilities": [
         "location"
@@ -12,43 +12,8 @@
     "resources": {
         "media": [
             {
-                "file": "images/background.png",
-                "name": "IMAGE_BACKGROUND",
-                "type": "png"
-            },
-            {
-                "file": "images/battery01.png",
-                "name": "IMAGE_BATTERY01",
-                "type": "png"
-            },
-            {
-                "file": "images/battery02.png",
-                "name": "IMAGE_BATTERY02",
-                "type": "png"
-            },
-            {
-                "file": "images/battery03.png",
-                "name": "IMAGE_BATTERY03",
-                "type": "png"
-            },
-            {
-                "file": "images/battery04.png",
-                "name": "IMAGE_BATTERY04",
-                "type": "png"
-            },
-            {
-                "file": "images/battery05.png",
-                "name": "IMAGE_BATTERY05",
-                "type": "png"
-            },
-            {
-                "file": "images/battery06.png",
-                "name": "IMAGE_BATTERY06",
-                "type": "png"
-            },
-            {
-                "file": "images/battery07.png",
-                "name": "IMAGE_BATTERY07",
+                "file": "images/battery09.png",
+                "name": "IMAGE_BATTERY09",
                 "type": "png"
             },
             {
@@ -57,8 +22,43 @@
                 "type": "png"
             },
             {
-                "file": "images/battery09.png",
-                "name": "IMAGE_BATTERY09",
+                "file": "images/battery07.png",
+                "name": "IMAGE_BATTERY07",
+                "type": "png"
+            },
+            {
+                "file": "images/battery06.png",
+                "name": "IMAGE_BATTERY06",
+                "type": "png"
+            },
+            {
+                "file": "images/battery05.png",
+                "name": "IMAGE_BATTERY05",
+                "type": "png"
+            },
+            {
+                "file": "images/battery04.png",
+                "name": "IMAGE_BATTERY04",
+                "type": "png"
+            },
+            {
+                "file": "images/battery03.png",
+                "name": "IMAGE_BATTERY03",
+                "type": "png"
+            },
+            {
+                "file": "images/battery02.png",
+                "name": "IMAGE_BATTERY02",
+                "type": "png"
+            },
+            {
+                "file": "images/battery01.png",
+                "name": "IMAGE_BATTERY01",
+                "type": "png"
+            },
+            {
+                "file": "images/background.png",
+                "name": "IMAGE_BACKGROUND",
                 "type": "png"
             }
         ]

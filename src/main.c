@@ -49,7 +49,7 @@ static void battery_handler(BatteryChargeState new_state) {
   static char s_battery_buffer[32];
   snprintf(s_battery_buffer, sizeof(s_battery_buffer), "%d%%", new_state.charge_percent);
   APP_LOG(APP_LOG_LEVEL_INFO, "%s", s_battery_buffer);
-  text_layer_set_text(s_battery_layer, s_battery_buffer);
+//   text_layer_set_text(s_battery_layer, s_battery_buffer);
 }
 
 static void main_window_load(Window *window) {
