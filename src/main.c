@@ -16,15 +16,33 @@ static GFont s_status_font;
 
 static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
+
 static GBitmap *s_battery01_bitmap;
+static BitmapLayer *s_battery01_layer;
+
 static GBitmap *s_battery02_bitmap;
+static BitmapLayer *s_battery02_layer;
+
 static GBitmap *s_battery03_bitmap;
+static BitmapLayer *s_battery03_layer;
+
 static GBitmap *s_battery04_bitmap;
+static BitmapLayer *s_battery04_layer;
+
 static GBitmap *s_battery05_bitmap;
+static BitmapLayer *s_battery05_layer;
+
 static GBitmap *s_battery06_bitmap;
+static BitmapLayer *s_battery06_layer;
+
 static GBitmap *s_battery07_bitmap;
+static BitmapLayer *s_battery07_layer;
+
 static GBitmap *s_battery08_bitmap;
+static BitmapLayer *s_battery08_layer;
+
 static GBitmap *s_battery09_bitmap;
+static BitmapLayer *s_battery09_layer;
 
 static void update_time() {
   // Get a tm structure
@@ -64,11 +82,14 @@ static void battery_handler(BatteryChargeState new_state) {
 static void main_window_load(Window *window) {
   //Create GBitmap, then set to created BitmapLayer
   s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BACKGROUND);
-  s_battery01_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY01);
   s_background_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
-  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery01_bitmap));
+
+  s_battery01_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY01);
+  s_battery01_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
+  bitmap_layer_set_bitmap(s_battery01_layer, s_battery01_bitmap);
+  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery01_layer));
 
   // Create GFont for Time Layer
   s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
@@ -160,6 +181,7 @@ static void main_window_unload(Window *window) {
 
   //Destroy BitmapLayer
   bitmap_layer_destroy(s_background_layer);
+  bitmap_layer_destroy(s_battery01_layer);
 
   // Destroy TextLayer
   text_layer_destroy(s_time_layer);
