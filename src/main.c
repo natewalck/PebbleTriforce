@@ -8,6 +8,8 @@ static TextLayer *s_time_layer;
 static TextLayer *s_date_layer;
 static TextLayer *s_weather_layer;
 
+static uint8_t battery_percent;
+
 // // Debugging var
 // static GSize s_time_layer_size;
 static GFont s_time_font;
