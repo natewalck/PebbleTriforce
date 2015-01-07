@@ -59,9 +59,46 @@ static void update_time() {
 static void battery_handler(BatteryChargeState new_state) {
   // Write to buffer and display
   static char s_battery_buffer[32];
-  snprintf(s_battery_buffer, sizeof(s_battery_buffer), "%d%%", new_state.charge_percent);
-  APP_LOG(APP_LOG_LEVEL_INFO, "%s", s_battery_buffer);
-//   text_layer_set_text(s_battery_layer, s_battery_buffer);
+  battery_percent = new_state.charge_percent;
+
+  switch(battery_percent) {
+    case 100:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
+      break;
+    case 90:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY090);
+      break;
+    case 80:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY080);
+      break;
+    case 70:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY070);
+      break;
+    case 60:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY060);
+      break;
+    case 50:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY050);
+      break;
+    case 40:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY040);
+      break;
+    case 30:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY030);
+      break;
+    case 20:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY020);
+      break;
+    case 10:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY010);
+      break;
+    default:
+      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
+      break;
+    }
+
+  bitmap_layer_set_bitmap(s_battery_layer, battery_icon_bitmap);
+  layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 }
 
 static void main_window_load(Window *window) {
@@ -187,6 +224,10 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   }
 }
 
+
+void change_battery_status(bool charging) {
+  if(settings.)
+}
 
 
 static void inbox_received_callback(DictionaryIterator *iterator, void *context) {
