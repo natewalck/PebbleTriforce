@@ -19,16 +19,7 @@ static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
 
 static BitmapLayer *s_battery_layer;
-static GBitmap *s_battery010_bitmap;
-static GBitmap *s_battery020_bitmap;
-static GBitmap *s_battery030_bitmap;
-static GBitmap *s_battery040_bitmap;
-static GBitmap *s_battery050_bitmap;
-static GBitmap *s_battery060_bitmap;
-static GBitmap *s_battery070_bitmap;
-static GBitmap *s_battery080_bitmap;
-static GBitmap *s_battery090_bitmap;
-static GBitmap *s_battery100_bitmap;
+static GBitmap *battery_image;
 
 
 static void update_time() {
@@ -65,41 +56,41 @@ static void battery_handler(BatteryChargeState new_state) {
 
   switch(battery_percent) {
     case 100:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
       break;
     case 90:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY090);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY090);
       break;
     case 80:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY080);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY080);
       break;
     case 70:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY070);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY070);
       break;
     case 60:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY060);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY060);
       break;
     case 50:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY050);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY050);
       break;
     case 40:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY040);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY040);
       break;
     case 30:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY030);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY030);
       break;
     case 20:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY020);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY020);
       break;
     case 10:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY010);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY010);
       break;
     default:
-      battery_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
+      battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
       break;
     }
 
-  bitmap_layer_set_bitmap(s_battery_layer, battery_icon_bitmap);
+  bitmap_layer_set_bitmap(s_battery_layer, battery_image);
   layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 }
 
@@ -112,9 +103,9 @@ static void main_window_load(Window *window) {
 
 
   // Create Battery Bitmap and layer
-  s_battery100_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
+  battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
   s_battery_layer = bitmap_layer_create(GRect(35, 104, 144, 80));
-  bitmap_layer_set_bitmap(s_battery_layer, s_battery100_bitmap);
+  bitmap_layer_set_bitmap(s_battery_layer, battery_image);
   bitmap_layer_set_alignment(s_battery_layer, GTextAlignmentCenter);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery_layer));
 
