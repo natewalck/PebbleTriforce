@@ -112,7 +112,7 @@ static void main_window_load(Window *window) {
 
   // Create Battery Bitmap and layer
   battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
-  s_battery_layer = bitmap_layer_create(GRect(0, 93, 144, 88));
+  s_battery_layer = bitmap_layer_create(GRect(0, 93, 144, 75));
   bitmap_layer_set_bitmap(s_battery_layer, battery_image);
   bitmap_layer_set_alignment(s_battery_layer, GAlignBottom);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery_layer));
