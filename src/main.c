@@ -7,7 +7,6 @@ static Window *s_main_window;
 static TextLayer *s_time_layer;
 static TextLayer *s_date_layer;
 static TextLayer *s_weather_layer;
-static TextLayer *s_battery_layer;
 
 // // Debugging var
 // static GSize s_time_layer_size;
