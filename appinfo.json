@@ -14,7 +14,7 @@
             {
                 "file": "images/battery100.png",
                 "name": "IMAGE_BATTERY100",
-                "type": "png-trans"
+                "type": "png"
             },
             {
                 "file": "images/battery090.png",
