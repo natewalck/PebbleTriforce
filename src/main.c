@@ -72,6 +72,7 @@ static void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
 
   s_battery100_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
+  s_battery050_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY050);
   s_battery_layer = bitmap_layer_create(GRect(35, 104, 144, 80));
   bitmap_layer_set_bitmap(s_battery_layer, s_battery100_bitmap);
   bitmap_layer_set_alignment(s_battery_layer, GTextAlignmentCenter);
