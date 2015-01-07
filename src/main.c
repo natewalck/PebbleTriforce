@@ -53,7 +53,7 @@ static void update_time() {
 static void battery_handler(BatteryChargeState new_state) {
   // Write to buffer and display
   battery_percent = new_state.charge_percent;
-  battery_state = new_state.is_charing;
+  battery_state = new_state.is_charging;
 
   if (battery_state)
   {
