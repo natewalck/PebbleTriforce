@@ -80,7 +80,7 @@ static void main_window_load(Window *window) {
 
 
   bitmap_layer_set_bitmap(s_battery_layer, s_battery050_bitmap);
-  layer_mark_dirty(s_battery_layer);
+  layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 
   // Create GFont for Time Layer
   s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
