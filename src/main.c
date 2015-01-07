@@ -17,32 +17,18 @@ static GFont s_status_font;
 static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
 
-static GBitmap *s_battery01_bitmap;
-static BitmapLayer *s_battery01_layer;
+static BitmapLayer *s_battery_layer;
+static GBitmap *s_battery010_bitmap;
+static GBitmap *s_battery020_bitmap;
+static GBitmap *s_battery030_bitmap;
+static GBitmap *s_battery040_bitmap;
+static GBitmap *s_battery050_bitmap;
+static GBitmap *s_battery060_bitmap;
+static GBitmap *s_battery070_bitmap;
+static GBitmap *s_battery080_bitmap;
+static GBitmap *s_battery090_bitmap;
+static GBitmap *s_battery100_bitmap;
 
-static GBitmap *s_battery02_bitmap;
-static BitmapLayer *s_battery02_layer;
-
-static GBitmap *s_battery03_bitmap;
-static BitmapLayer *s_battery03_layer;
-
-static GBitmap *s_battery04_bitmap;
-static BitmapLayer *s_battery04_layer;
-
-static GBitmap *s_battery05_bitmap;
-static BitmapLayer *s_battery05_layer;
-
-static GBitmap *s_battery06_bitmap;
-static BitmapLayer *s_battery06_layer;
-
-static GBitmap *s_battery07_bitmap;
-static BitmapLayer *s_battery07_layer;
-
-static GBitmap *s_battery08_bitmap;
-static BitmapLayer *s_battery08_layer;
-
-static GBitmap *s_battery09_bitmap;
-static BitmapLayer *s_battery09_layer;
 
 static void update_time() {
   // Get a tm structure
@@ -86,11 +72,10 @@ static void main_window_load(Window *window) {
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   // layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
 
-  s_battery01_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY01_BLACK);
-  s_battery01_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
-  bitmap_layer_set_alignment(s_battery01_layer, GAlignTopLeft);
-  bitmap_layer_set_bitmap(s_battery01_layer, s_battery01_bitmap);
-  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery01_layer));
+  s_battery100_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100_BLACK);
+  s_battery_layer = bitmap_layer_create(GRect(35, 75, 144, 75));
+  bitmap_layer_set_bitmap(s_battery_layer, s_battery100_bitmap);
+  layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery_layer));
 
   // Create GFont for Time Layer
   s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
@@ -182,7 +167,7 @@ static void main_window_unload(Window *window) {
 
   //Destroy BitmapLayer
   bitmap_layer_destroy(s_background_layer);
-  bitmap_layer_destroy(s_battery01_layer);
+  bitmap_layer_destroy(s_battery_layer);
 
   // Destroy TextLayer
   text_layer_destroy(s_time_layer);
