@@ -218,11 +218,6 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 }
 
 
-void change_battery_status(bool charging) {
-  if(settings.)
-}
-
-
 static void inbox_received_callback(DictionaryIterator *iterator, void *context) {
   // Store incoming information
   static char temperature_buffer[8];
