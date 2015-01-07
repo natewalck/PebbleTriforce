@@ -71,16 +71,17 @@ static void main_window_load(Window *window) {
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
 
+
+  // Create Battery Bitmap and layer
   s_battery100_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
-  s_battery050_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY050);
   s_battery_layer = bitmap_layer_create(GRect(35, 104, 144, 80));
   bitmap_layer_set_bitmap(s_battery_layer, s_battery100_bitmap);
   bitmap_layer_set_alignment(s_battery_layer, GTextAlignmentCenter);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery_layer));
 
-
-  bitmap_layer_set_bitmap(s_battery_layer, s_battery050_bitmap);
-  layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
+  // // Change battery bitmap to show current battery status
+  // bitmap_layer_set_bitmap(s_battery_layer, s_battery050_bitmap);
+  // layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 
   // Create GFont for Time Layer
   s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
@@ -134,18 +135,6 @@ static void main_window_load(Window *window) {
   // Set font for weather layer
   text_layer_set_font(s_weather_layer, s_status_font);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_weather_layer));
-
-
-  // Create Battery Layer
-  // s_battery_layer = text_layer_create(GRect(8, 59, 128, 88));
-  // text_layer_set_background_color(s_battery_layer, GColorClear);
-  // text_layer_set_text_color(s_battery_layer, GColorBlack);
-  // text_layer_set_text_alignment(s_battery_layer, GTextAlignmentRight);
-  // text_layer_set_text(s_battery_layer, "Battery");
-
-  // // Set font for battery layer
-  // text_layer_set_font(s_battery_layer, s_status_font);
-  // layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_battery_layer));
 
 
   // Create Date Layer
