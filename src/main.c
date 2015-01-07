@@ -164,10 +164,10 @@ static void main_window_load(Window *window) {
   s_status_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
 
   // Create temperature Layer
-  s_weather_layer = text_layer_create(GRect(8, 64, 132, 88));
+  s_weather_layer = text_layer_create(GRect(12, 64, 132, 88));
   text_layer_set_background_color(s_weather_layer, GColorClear);
   text_layer_set_text_color(s_weather_layer, GColorBlack);
-  text_layer_set_text_alignment(s_weather_layer, GTextAlignmentLeft);
+  text_layer_set_text_alignment(s_weather_layer, GTextAlignmentCenter);
   text_layer_set_text(s_weather_layer, "Loading...");
 
   // Set font for weather layer
