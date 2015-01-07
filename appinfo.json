@@ -12,6 +12,11 @@
     "resources": {
         "media": [
             {
+                "file": "images/batterycharging.png",
+                "name": "IMAGE_BATTERYCHARGING",
+                "type": "png"
+            },
+            {
                 "file": "images/battery100.png",
                 "name": "IMAGE_BATTERY100",
                 "type": "png"
