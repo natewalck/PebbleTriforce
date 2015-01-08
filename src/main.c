@@ -122,7 +122,7 @@ static void main_window_load(Window *window) {
   // layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 
   // Create GFont for Time Layer
-  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
+  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT);
 
 
   // Figure out dimensions for Time Layer
