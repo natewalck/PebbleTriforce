@@ -122,7 +122,7 @@ static void main_window_load(Window *window) {
   // layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 
   // Create GFont for Time Layer
-  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_34_MEDIUM_NUMBERS);
+  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_LIGHT);
 
 
   // Figure out dimensions for Time Layer
@@ -190,7 +190,7 @@ static void main_window_load(Window *window) {
   battery_handler(battery_state_service_peek());
 
   // Make sure the time is displayed from the start
-  update_time();
+  // update_time();
 }
 
 static void main_window_unload(Window *window) {
@@ -209,7 +209,7 @@ static void main_window_unload(Window *window) {
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
-  update_time();
+  // update_time();
 
   // Get weather update every 30 minutes
   if(tick_time->tm_min % 30 == 0) {
