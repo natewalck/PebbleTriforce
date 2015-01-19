@@ -92,6 +92,9 @@ static void battery_handler(BatteryChargeState new_state) {
       case 10:
         battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY010);
         break;
+      case 0:
+        battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY000);
+        break;
       default:
         battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
         break;
