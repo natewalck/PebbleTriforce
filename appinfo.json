@@ -67,6 +67,11 @@
                 "type": "png"
             },
             {
+                "file": "images/battery000.png",
+                "name": "IMAGE_BATTERY000",
+                "type": "png"
+            },
+            {
                 "file": "images/background.png",
                 "name": "IMAGE_BACKGROUND",
                 "type": "png"
