@@ -20,7 +20,6 @@ static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
 
 static BitmapLayer *s_battery_layer;
-static GBitmap *battery_image;
 
 
 static void update_time() {
@@ -54,6 +53,8 @@ static void battery_handler(BatteryChargeState new_state) {
   // Write to buffer and display
   battery_percent = new_state.charge_percent;
   battery_state = new_state.is_charging;
+
+  GBitmap *battery_image;
 
   if (battery_state)
   {
@@ -114,9 +115,7 @@ static void main_window_load(Window *window) {
 
 
   // Create Battery Bitmap and layer
-  battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
   s_battery_layer = bitmap_layer_create(GRect(0, 85, 144, 75));
-  bitmap_layer_set_bitmap(s_battery_layer, battery_image);
   bitmap_layer_set_alignment(s_battery_layer, GAlignBottom);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_battery_layer));
 
