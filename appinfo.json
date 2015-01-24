@@ -87,7 +87,7 @@
     "shortName": "Triforce",
     "uuid": "172e5abf-0780-4f4f-8290-0c0e7e011746",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }
