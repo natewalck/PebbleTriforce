@@ -144,7 +144,7 @@ static void main_window_load(Window *window) {
   // Create time TextLayer
   s_time_layer = text_layer_create(GRect(7, time_text_y, 132, 88));
   text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorBlack);
+  text_layer_set_text_color(s_time_layer, GColorWhite);
   text_layer_set_text(s_time_layer, "00:00");
 
 
@@ -168,7 +168,7 @@ static void main_window_load(Window *window) {
   // Create temperature Layer
   s_weather_layer = text_layer_create(GRect(12, 64, 132, 88));
   text_layer_set_background_color(s_weather_layer, GColorClear);
-  text_layer_set_text_color(s_weather_layer, GColorBlack);
+  text_layer_set_text_color(s_weather_layer, GColorWhite);
   text_layer_set_text_alignment(s_weather_layer, GTextAlignmentCenter);
   text_layer_set_text(s_weather_layer, "Loading...");
 
@@ -180,7 +180,7 @@ static void main_window_load(Window *window) {
   // Create Date Layer
   s_date_layer = text_layer_create(GRect(8, 0, 128, 88));
   text_layer_set_background_color(s_date_layer, GColorClear);
-  text_layer_set_text_color(s_date_layer, GColorBlack);
+  text_layer_set_text_color(s_date_layer, GColorWhite);
   text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
   text_layer_set_text(s_date_layer, "January 1, 1900");
 
