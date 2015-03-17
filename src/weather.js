@@ -23,13 +23,13 @@ function locationSuccess(pos) {
       console.log("Temperature is " + temperature);
 
       // Conditions
-      var conditions = json.weather[0].main;
-      console.log("Conditions are " + conditions);
+//       var conditions = json.weather[0].main;
+//       console.log("Conditions are " + conditions);
 
       // Assemble dictionary using our keys
       var dictionary = {
         "KEY_TEMPERATURE": temperature,
-        "KEY_CONDITIONS": conditions
+//         "KEY_CONDITIONS": conditions
       };
 
       // Send to Pebble

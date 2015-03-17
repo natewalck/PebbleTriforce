@@ -124,7 +124,7 @@ static void main_window_load(Window *window) {
   // layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 
   // Create GFont for Time Layer
-  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_34_MEDIUM_NUMBERS);
+  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD);
 
 
   // Figure out dimensions for Time Layer
@@ -163,10 +163,10 @@ static void main_window_load(Window *window) {
 //   APP_LOG(APP_LOG_LEVEL_INFO , "Frame Origin x is %i", time_layer_frame.origin.y);
 
   // Create second font, apply it and add to Window
-  s_status_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
+  s_status_font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
 
   // Create temperature Layer
-  s_weather_layer = text_layer_create(GRect(12, 64, 132, 88));
+  s_weather_layer = text_layer_create(GRect(28, 122, 88, 88));
   text_layer_set_background_color(s_weather_layer, GColorClear);
   text_layer_set_text_color(s_weather_layer, GColorWhite);
   text_layer_set_text_alignment(s_weather_layer, GTextAlignmentCenter);
@@ -178,7 +178,7 @@ static void main_window_load(Window *window) {
 
 
   // Create Date Layer
-  s_date_layer = text_layer_create(GRect(8, 0, 128, 88));
+  s_date_layer = text_layer_create(GRect(8, 6, 128, 88));
   text_layer_set_background_color(s_date_layer, GColorClear);
   text_layer_set_text_color(s_date_layer, GColorWhite);
   text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
@@ -257,7 +257,7 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   }
 
   // Assemble full string and display
-  snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s, %s", temperature_buffer, conditions_buffer);
+  snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s", temperature_buffer);
   text_layer_set_text(s_weather_layer, weather_layer_buffer);
 }
 
