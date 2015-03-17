@@ -7,7 +7,7 @@
         "location"
     ],
     "companyName": "OS X Devops",
-    "longName": "Triforce Advanced",
+    "longName": "Triforce",
     "projectType": "native",
     "resources": {
         "media": [
@@ -78,16 +78,16 @@
                 "type": "png"
             },
             {
-                "file": "images/batterycharging.png",
+                "file": "images/battery100.png",
                 "name": "IMAGE_BATTERYCHARGING",
                 "type": "png"
             }
         ]
     },
     "shortName": "Triforce",
-    "uuid": "172e5abf-0780-4f4f-8290-0c0e7e011746",
+    "uuid": "1ed0b6ef4-cc5f-11e4-8731-1681e6b88ec1",
     "versionCode": 1,
-    "versionLabel": "1.1",
+    "versionLabel": "1.0",
     "watchapp": {
         "watchface": true
     }
