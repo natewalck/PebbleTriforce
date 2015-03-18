@@ -102,6 +102,7 @@ static void battery_handler(BatteryChargeState new_state) {
       }
   }
 
+  bitmap_layer_set_compositing_mode(s_battery_layer, GCompOpSet);
   bitmap_layer_set_bitmap(s_battery_layer, battery_image);
   layer_mark_dirty(bitmap_layer_get_layer(s_battery_layer));
 }
