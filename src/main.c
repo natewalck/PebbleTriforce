@@ -58,7 +58,7 @@ static void battery_handler(BatteryChargeState new_state) {
 
   if (battery_state)
   {
-    battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERYCHARGING);
+    battery_image = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BATTERY100);
   }
   else
   {
